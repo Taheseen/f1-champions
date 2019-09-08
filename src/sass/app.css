@@ -3,7 +3,7 @@
   --red: red;
   --black: black;
   --white: white;
-  --light-maroon: #803636;
+  --light-maroon: #e10600;
 }
 body {
   background-color: var(--black);
@@ -23,11 +23,19 @@ main {
   text-align: center;
 }
 .title {
-  font-size: 2.6em;
-  text-align: center;
   color: white;
-  margin-bottom: 20px;
   font-style: italic;
+  font-size: 0.8em;
+  line-height: 0em;
+}
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 20px 0;
+}
+.logo {
+  float: left;
+  width: 33%;
 }
 .loader {
   font-size: 1.5em;
@@ -53,6 +61,11 @@ p {
   margin-bottom: 1em;
   padding: 0 10px;
 }
+.flag {
+  width: 10%;
+  position: relative;
+  top: 7px;
+}
 section {
   border-top: 3px solid var(--white);
   border-bottom: 3px solid var(--white);
@@ -63,6 +76,17 @@ section {
   color: black;
 }
 @media (min-width: 620px) {
+  .logo {
+    width: 15%;
+  }
+  .title {
+    line-height: 2em;
+    font-size: 1em;
+  }
+  .flag {
+    width: 4%;
+    top: 11px;
+  }
   .season-list {
     display: grid;
     grid-gap: 10px;

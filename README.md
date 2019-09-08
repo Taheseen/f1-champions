@@ -1,5 +1,9 @@
 # f1-champions
+Responsive Single page application using VUE.
 
+## Launch Application
+
+Please [click here](https://f1-champions.herokuapp.com/) to launch the application. 
 ## Project setup
 ```
 npm install
