@@ -6,7 +6,8 @@ export default {
     return {
       racers: '', // list of all the winners of season
       champions: '', // champions of season
-      seasons: '' // 2005 - 2015
+      seasons: '', // 2005 - 2015
+      activeSeason: 0
     }
   },
   methods: {
@@ -18,8 +19,9 @@ export default {
        * @param season season (2005 - 2015) to be filtered
     */
 
-    filterWinners: function (season) {
+    filterWinners: function (season, index) {
       service.getAllWinners(season).then(response => {
+        this.activeSeason = index || 0
         this.data = response.data.MRData.RaceTable.Races
         this.racers = this.data.map(participant => {
           return {

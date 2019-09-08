@@ -1,36 +1,22 @@
 /* Layout styles -----------------------------------*/
-@media (min-width: 620px) {
 
-  .options-link {
-      margin-left: 1em;
-    }
-  }
-  
   :root {
-    --blue: #34495e;
-    --green: #e74c3c;
-    --yellow: #C9C243;
-    --orange: #FFA644;
-    --red: #3498db;
-    --light-pink: #f7f5f5;
-    --green:#00241c;
-    --purple: #092679;
+    --red: red;
+    --black: black;
+    --white: white;
+    --light-maroon: #803636;
   }
   
   body {
-    background-color: var(--blue);
-    font-family: 'Ubuntu', sans-serif;
-    color: #34495e;
-    // font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    // -webkit-font-smoothing: antialiased;
-    // -moz-osx-font-smoothing: grayscale;
-    // color:white;
-    // opacity: 1;
-    // margin: 0;
-    // padding: 0;
-    // min-height: 100vh;
-    // background: rgb(121,9,95);
-    // background: linear-gradient(0deg, var(--purple) 20%, var(--green) 100%);
+    background-color: var(--black);
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color:white;
+    opacity: 1;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
     @import "./table.css";
   }
   
@@ -38,30 +24,35 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
   }
   
   .title {
     font-size: 2.6em;
     text-align: center;
     color: white;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    font-style: italic;
   }
-  
+  .loader {
+    font-size: 1.5em;
+    text-align: center;
+    font-style: italic;
+    margin-top: 10%;
+  }
   .season-list {
-    display: grid;
-    grid-gap: 10px;
-    grid-auto-columns: minmax(10px, auto);
-    grid-auto-flow: column;
+    line-height: 3em;
 
     &__link {
+        color: var(--black);
         text-decoration: none;
         font-size: 0.9em;
-        color: var(--red);
-        background-color: var(--light-pink);
         padding: 0.5em;
+        text-align: center;
       }
     &__active {
-      background-color: #34495e;
+      background-color: var(--light-maroon);
+      color: var(--black);
     }
   }
   p {
@@ -70,17 +61,29 @@
   }
   
   section {
-    border-top: 3px solid var(--red);
+    border-top: 3px solid var(--white);
+    border-bottom: 3px solid var(--white);
     border-radius: 3px;
     background-color: white;
     margin-bottom: 20px;
     overflow: hidden;
+    color: black;
   }
   
   @media (min-width: 620px) {
     .season-list {
+      display: grid;
+      grid-gap: 10px;
+      grid-auto-columns: minmax(10px, auto);
+      grid-auto-flow: column;
+      color: var(--black);
+  
       &__link {
-        font-size: 1.4em;
+          margin-left: 1em;
+          padding: 0.5em;
+          font-size: 1.4em;
+          line-height: 1em;
+        }
       }
     }
-  }
+    

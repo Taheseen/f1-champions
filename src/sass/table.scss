@@ -1,7 +1,4 @@
-$table-header: #1976D2;
-$table-header-border: #1565C0;
-$table-border: #d9d9d9;
-$row-bg: #f4f2f1;
+
 
 div {
   box-sizing: border-box;
@@ -14,24 +11,24 @@ div {
 .flex-table {
   display: flex;
   flex-flow: row wrap;
-  border-left: solid 1px $table-border;
+  border-left: solid 1px var(--black);
   transition: 0.5s;
 
   &:first-of-type {
-    border-top: solid 1px $table-header-border;
-    border-left: solid 1px $table-header-border;
+    border-top: solid 1px var(--white);
+    border-left: solid 1px var(--white);
   }
 
   &:first-of-type .flex-row {
-    background: $table-header;
+    background: var(--black);
     color: white;
-    border-color: $table-header-border;
+    border-color: var(--white);
   }
 
   &.row:nth-child(odd) .flex-row {
-    background: $row-bg;
+    background: var(--light-maroon);
   }
-  
+
   &:hover {
     background: #F5F5F5;
     transition: 500ms;
@@ -42,8 +39,8 @@ div {
   width: calc(100% / 4);
   text-align: center;
   padding: 1em;
-  border-right: solid 1px $table-border;
-  border-bottom: solid 1px $table-border;
+  border-right: solid 1px var(--black);
+  border-bottom: solid 1px var(--black);
 }
 
 .rowspan {
@@ -64,7 +61,7 @@ div {
     width: 100%;
     padding: 0;
     border: 0;
-    border-bottom: solid 1px $table-border;
+    border-bottom: solid 1pxvar(--black);
     &:hover {
       background: #F5F5F5;
       transition: 500ms;
@@ -76,7 +73,7 @@ div {
   width: calc(100% / 3); //1px = border right
   text-align: center;
   padding: 0.5em 0.5em;
-  border-right: solid 1px $table-border;
+  border-right: solid 1px var(--black);
   //flex: 1 1 33.3%;
   &:last-child {
     // border-right: 0;
@@ -104,7 +101,7 @@ div {
       border-bottom: 0;
     }
     .flex-row:last-of-type {
-      border-bottom: solid 1px $table-border;
+      border-bottom: solid 1px var(--black);
     }
   }
   
@@ -119,14 +116,14 @@ div {
     
    &.first {
      width: 100%;
-     border-bottom: solid 1px $table-border;
+     border-bottom: solid 1px var(--black);
    }
   }
 
   .column {
     width: 100%;
     .flex-row {
-      border-bottom: solid 1px $table-border;
+      border-bottom: solid 1px var(--black);
     }
   }
 
