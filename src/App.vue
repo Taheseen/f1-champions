@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import championList from './components/championList.vue'
+import championList from './components/championList/championList.vue'
 
 export default {
   name: 'app',

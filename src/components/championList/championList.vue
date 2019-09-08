@@ -1,0 +1,20 @@
+<template>
+  <div>
+    <h1 class="title">F1 Champions</h1>
+    <main v-if="seasons">
+      <section class="season-list">
+        <a href="#" v-for="(winner, index) in seasons" :key="index" class="season-list__link" :class="{ 'season-list__active': index === 0 }" @click="filterWinners(winner.season, index)">{{winner.season}}
+        </a>
+      </section>
+      <section>
+        <div v-for="(winner, index) in champions" :key="index" >
+          <p>The champion is <span>{{winner.familyName}} {{winner.givenName}}</span> of nationality
+          <span> {{winner.nationality}}</span> Please <a target="_blank" :href="winner.url" class=""> click here </a> to learn more</p>
+        </div>
+      </section>
+      <winnersList v-if="racers" :racers="racers"/>
+    </main>
+  </div>
+</template>
+
+<script src="./championList.js"/>

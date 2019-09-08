@@ -11,28 +11,27 @@ div {
   display: block;
   background-color: gray
 }
-
-.flag-icon {
-  margin-right: 0.1em;
-}
-
 .flex-table {
   display: flex;
   flex-flow: row wrap;
   border-left: solid 1px $table-border;
   transition: 0.5s;
+
   &:first-of-type {
     border-top: solid 1px $table-header-border;
     border-left: solid 1px $table-header-border;
   }
+
   &:first-of-type .flex-row {
     background: $table-header;
     color: white;
     border-color: $table-header-border;
   }
+
   &.row:nth-child(odd) .flex-row {
     background: $row-bg;
   }
+  
   &:hover {
     background: #F5F5F5;
     transition: 500ms;

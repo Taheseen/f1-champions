@@ -1,6 +1,6 @@
 
 <template>
-    <div class="table-container" role="table" aria-label="Destinations">
+    <div class="table-container" role="table" aria-label="f1Winners">
         <div class="flex-table header" role="rowgroup">
             <div class="flex-row first" role="columnheader">Driver</div>
             <div class="flex-row" role="columnheader">Nationality</div>

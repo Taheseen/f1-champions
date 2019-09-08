@@ -1,0 +1,64 @@
+@import url(./table.css);
+@media (min-width: 620px) {
+  .options-link {
+    margin-left: 1em;
+  }
+}
+:root {
+  --blue: #34495e;
+  --green: #e74c3c;
+  --yellow: #c9c243;
+  --orange: #ffa644;
+  --red: #3498db;
+  --light-pink: #f7f5f5;
+  --green: #00241c;
+  --purple: #092679;
+}
+body {
+  background-color: var(--blue);
+  font-family: "Ubuntu", sans-serif;
+  color: #34495e;
+}
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.title {
+  font-size: 2.6em;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+.season-list {
+  display: grid;
+  grid-gap: 10px;
+  grid-auto-columns: minmax(10px, auto);
+  grid-auto-flow: column;
+}
+.season-list__link {
+  text-decoration: none;
+  font-size: 0.9em;
+  color: var(--red);
+  background-color: var(--light-pink);
+  padding: 0.5em;
+}
+.season-list__active {
+  background-color: #34495e;
+}
+p {
+  margin-bottom: 1em;
+  padding: 0 10px;
+}
+section {
+  border-top: 3px solid var(--red);
+  border-radius: 3px;
+  background-color: white;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+@media (min-width: 620px) {
+  .season-list__link {
+    font-size: 1.4em;
+  }
+}
